@@ -66,4 +66,20 @@ class SteamCallback
 
         return $steamCallback;
     }
+
+    public function toArray(): array
+    {
+        return [
+            'openid.ns' => $this->openid_ns,
+            'openid.mode' => $this->openid_mode,
+            'openid.op_endpoint' => $this->openid_op_endpoint,
+            'openid.claimed_id' => $this->openid_claimed_id,
+            'openid.identity' => $this->openid_identity,
+            'openid.return_to' => $this->openid_return_to,
+            'openid.response_nonce' => $this->openid_response_nonce,
+            'openid.assoc_handle' => $this->openid_assoc_handle,
+            'openid.signed' => $this->openid_signed,
+            'openid.sig' => $this->openid_sig,
+        ];
+    }
 }

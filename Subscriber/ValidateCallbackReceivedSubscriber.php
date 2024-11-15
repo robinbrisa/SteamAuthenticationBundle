@@ -42,7 +42,7 @@ class ValidateCallbackReceivedSubscriber implements EventSubscriberInterface
             'POST',
             self::STEAM_VALIDATION_URL,
             [
-                'body' => (array) $callback
+                'body' => $callback->toArray()
             ]
         );
 
